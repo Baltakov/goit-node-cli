@@ -1,4 +1,3 @@
-import { constants } from "node:buffer";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { nanoid } from "nanoid";
@@ -36,6 +35,6 @@ export async function addContact(name, email, phone) {
     phone: phone,
   };
   contacts.push(newContact);
-  await updateContacts(constants);
+  await updateContacts(contacts);
   return newContact;
 }
